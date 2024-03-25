@@ -1,0 +1,15 @@
+.button {
+    display: block;
+    max-width: 600px;
+    width: 90%;
+    height: 12%;
+    min-height: 50px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+.button:hover {
+    filter: brightness(125%);
+}

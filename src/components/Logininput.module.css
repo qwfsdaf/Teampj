@@ -1,0 +1,17 @@
+.input {
+    flex: 1;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 0 0.5rem;
+}
+
+.div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-accent);
+    width: 90%;
+}
