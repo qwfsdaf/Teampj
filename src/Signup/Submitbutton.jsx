@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './Submitbutton.module.css'
 
-function Submitbutton({ title, url }) {
+function Submitbutton({ title, url, sty }) {
     const navigate = useNavigate();
 
     const handleUserHistory = () => navigate(url)

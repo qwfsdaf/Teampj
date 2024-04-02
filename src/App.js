@@ -3,6 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Idform from './Idform/Idform'
 import Login from './Signup/Login'
 import NotFound from './components/NotFound'
+import Idfind from './find/Idfind'
+import Pwmodify from './find/Pwmodify'
+import Home from './Home/Home'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,18 @@ const router = createBrowserRouter([
   {
     path: '/Signup',
     element: <Idform />
+  },
+  {
+    path: '/Idfind',
+    element: <Idfind />
+  },
+  {
+    path: '/Pwmodify',
+    element: <Pwmodify />
+  },
+  {
+    path: 'Home',
+    element: <Home />
   }
 ])
 

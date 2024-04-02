@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from '../Header/Header'
-import styles from './Login.module.css'
+import styles from './Idfind.module.css'
 import Logininput from '../components/Logininput'
-import Submitbutton from './Submitbutton'
-import { Link } from 'react-router-dom'
+import Submitbutton from '../Signup/Submitbutton'
+import Header from '../Header/Header'
 
-
-function Signup() {
+function Idfind() {
     return (
         <>
             <Header />
@@ -24,15 +22,18 @@ function Signup() {
                         iconsspan={"material-symbols-outlined"}
                     />
                 </div>
-                <Submitbutton url="/Home" title="로그인" />
-                <div className={styles.Link}>
-                    <Link className={styles.idfind} to='/Idfind'>아이디찾기</Link>
-                    <Link className={styles.pwfind} to='/Pwmodify'>비밀번호변경</Link>
+                <div className={styles.nickname}>
+                    <Logininput title={"닉네임"}
+                        icon={"person"}
+                        icons={"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"}
+                        iconsspan={"material-symbols-outlined"}
+                    />
                 </div>
-                <Submitbutton url="/Signup" title="회원가입" />
+                <div className={styles.border}></div>
+                <Submitbutton url="/Login" title="아이디 찾기" />
             </div>
         </>
     )
 }
 
-export default Signup
+export default Idfind
