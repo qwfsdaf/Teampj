@@ -13,7 +13,8 @@ export default function Chat() {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         const userInput = inputValue; // 사용자 입력 저장
-        const botResponse = await generateChatText(inputValue); // 챗봇의 응답 받기
+        // 챗봇의 응답 받기 (이전 대화 기록 포함)
+        const botResponse = await generateChatText(inputValue, chatHistory);
         setInputValue("");
 
         // 채팅 기록 업데이트
@@ -24,7 +25,12 @@ export default function Chat() {
     };
 
 
-    async function generateChatText(input) {
+
+    async function generateChatText(input, chatHistory) {
+        // 이전 대화 내용을 포함하여 messages 배열 생성
+        const messages = chatHistory.map(chat => ({ role: "system", content: `User: ${chat.user}\nBot: ${chat.response}` }));
+        messages.push({ role: "user", content: input }); // 현재 사용자 입력 추가
+
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -32,21 +38,21 @@ export default function Chat() {
                 "Authorization": `Bearer ${process.env.REACT_APP_CHAT_API_KEY}`,
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo", // 사용 가능한 최신 챗 모델로 대체하세요.
-                messages: [{ role: "user", content: input }],
-                temperature: 0.8, // 모델의 출력 다양성
-                max_tokens: 150, // 응답받을 메시지 최대 토큰(단어) 수 설정
-                top_p: 1, // 토큰 샘플링 확률을 설정
-                frequency_penalty: 0.5, // 일반적으로 나오지 않는 단어를 억제하는 정도
-                presence_penalty: 0.5, // 동일한 단어나 구문이 반복되는 것을 억제하는 정도
-                stop: ["Human"], // 생성된 텍스트에서 종료150 구문을 설정
-
+                model: "gpt-3.5-turbo", // 사용 가능한 최신 챗 모델
+                messages: messages,
+                temperature: 0.8,
+                max_tokens: 150,
+                top_p: 1,
+                frequency_penalty: 0.5,
+                presence_penalty: 0.5,
+                stop: ["Human"],
             }),
         });
 
         const data = await response.json();
         return data.choices[0].message.content;
     }
+
 
     return (
         <main className={styles.container}>
