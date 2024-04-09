@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    width: 80%;
+    height: 80%;
+    align-content: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(100px, max-content) 1fr;
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+
+    div {
+        color: #fff;
+        padding: 5px 10px;
+
+        &:nth-child(even) {
+            background-color: #06beb6;
+        }
+
+        &:nth-child(odd) {
+            background-color: #48b1bf;
+        }
+    }
+}
+
+.button {
+    width: 300px;
+    margin: auto;
+}

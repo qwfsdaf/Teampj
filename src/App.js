@@ -5,7 +5,7 @@ import Login from './Signup/Login'
 import NotFound from './components/NotFound'
 import Idfind from './find/Idfind'
 import Pwmodify from './find/Pwmodify'
-import Home from './Home/Home'
+import ChatbotMain from './Pages/Chatbotmain'
 
 const router = createBrowserRouter([
   {
@@ -26,9 +26,9 @@ const router = createBrowserRouter([
     element: <Pwmodify />
   },
   {
-    path: 'Home',
-    element: <Home />
-  }
+    path: '/',
+    element: <ChatbotMain />
+  },
 ])
 
 export default function App() {
