@@ -12,24 +12,32 @@ export default function Chat() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        const userInput = inputValue; // 사용자 입력 저장
-        // 챗봇의 응답 받기 (이전 대화 기록 포함)
-        const botResponse = await generateChatText(inputValue, chatHistory);
+        const userInput = { role: 'user', content: inputValue }; // 사용자 입력 저장
+        // 챗봇의 응답 받기
+        const botResponseContent = await generateChatText(inputValue, chatHistory);
+        const botResponse = { role: 'bot', content: botResponseContent };
+
         setInputValue("");
 
         // 채팅 기록 업데이트
         setChatHistory(prevHistory => [
             ...prevHistory,
-            { id: prevHistory.length, user: userInput, response: botResponse }
+            userInput,
+            botResponse
         ]);
     };
 
 
 
+
     async function generateChatText(input, chatHistory) {
         // 이전 대화 내용을 포함하여 messages 배열 생성
-        const messages = chatHistory.map(chat => ({ role: "system", content: `User: ${chat.user}\nBot: ${chat.response}` }));
-        messages.push({ role: "user", content: input }); // 현재 사용자 입력 추가
+        const messages = chatHistory.map(chat => ({
+            role: chat.role === 'user' ? "user" : "assistant", // 'user' 또는 'assistant' 역할 적용
+            content: chat.content
+        }));
+        // 현재 사용자 입력 추가
+        messages.push({ role: "user", content: input });
 
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
@@ -54,23 +62,28 @@ export default function Chat() {
     }
 
 
+
     return (
         <main className={styles.container}>
             <Header />
-            <div className={styles.form}>
-                <div className="chat-history">
+            <div className={styles.chatting}>
+                <div className={styles.chathistory}> {/* chat-history 클래스 적용 */}
                     {chatHistory.map((chat, index) => (
-                        <div key={index} className="chat-message">
-                            <div className={styles.grid}>User: {chat.user}</div>
-                            <div className={styles.grid}>Bot: {chat.response}</div>
+                        <div key={index} className={`${styles.messagebox} ${chat.role === 'user' ? styles.userMessage : styles.botMessage}`}>
+                            <div>{chat.content}</div>
                         </div>
                     ))}
                 </div>
-                <form className={styles.button} onSubmit={handleFormSubmit}>
-                    <input type="text" value={inputValue} onChange={handleInputChange} />
-                    <button type="submit">Send</button>
+                <form className={styles.chatform} onSubmit={handleFormSubmit}>
+                    <div className={styles.nav}>
+                        <input className={styles.input} type="text" value={inputValue} onChange={handleInputChange} />
+                        <button className={styles.button}
+                            type="submit"></button>
+                    </div>
                 </form>
             </div>
         </main>
     );
+
+
 }

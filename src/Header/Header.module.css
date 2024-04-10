@@ -15,13 +15,14 @@
 }
 
 .button {
-    background-color: var(--color-white);
+    background-color: transparent;
+    margin-top: 5px;
     font-size: 2.2rem;
-    padding: 0 1rem;
     color: var(--color-accent);
 }
 
 .logo {
+    padding: 0 1rem;
     color: var(--color-accent);
 }
 
