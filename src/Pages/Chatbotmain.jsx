@@ -17,7 +17,7 @@ export default function Chat() {
 
     useEffect(() => {
         // 페이지가 로드될 때 챗봇이 처음으로 메시지를 보냄
-        const initialBotMessage = { role: 'bot', content: '안녕하세요, 세로입니다. 무엇이든 물어보세요.' };
+        const initialBotMessage = { role: 'bot', content: '안녕하세요, 세로입니다. 무엇이든 물어보세요. :)' };
         setChatHistory([initialBotMessage]);
     }, []);
 

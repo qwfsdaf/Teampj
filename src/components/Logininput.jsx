@@ -1,33 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import styles from './Logininput.module.css';
 
-function LoginButton({ title, icons, iconsspan, icon, props }) {
-    const [text, settext] = useState('');
-    const [id, setid] = useState('');
-    const [password, setpassword] = useState('');
-    const [repassword, setrepassword] = useState('');
-    const [nickname, setnickname] = useState('');
-    const [email, setemail] = useState('');
-    const handleChange = (e) => {
-        settext(e.target.value);
-        if (title === '아이디') {
-            setid(e.target.value)
-        } else if (title === '비밀번호') {
-            setpassword(e.target.value);
-        }
-        else if (title === '비밀번호 확인') {
-            setrepassword(e.target.value);
-        }
-        else if (title === '닉네임') {
-            setnickname(e.target.value);
-        }
-        else {
-            setemail(e.target.value);
-        }
-    };
-    useEffect(() => {
-        localStorage.setItem(`아이디`, JSON.stringify({ id, password, repassword, nickname, email }))
-    }, [email, id, nickname, password, repassword])
+function LoginButton({ icons, iconsspan, icon, type, name, placeholder, value, onChange, ...props }) {
 
     return (
         <div className={styles.div}>
@@ -37,10 +10,12 @@ function LoginButton({ title, icons, iconsspan, icon, props }) {
             </span>
             <input
                 className={styles.input}
-                type='text'
-                placeholder={title}
-                value={text}
-                onChange={handleChange}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                {...props}
             />
         </div>
     )
