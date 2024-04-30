@@ -68,7 +68,7 @@ export default function Chat() {
                 model: "gpt-3.5-turbo", // 사용 가능한 최신 챗 모델
                 messages: messages,
                 temperature: 0.8,
-                max_tokens: 150,
+                max_tokens: 1024,
                 top_p: 1,
                 frequency_penalty: 0.5,
                 presence_penalty: 0.5,

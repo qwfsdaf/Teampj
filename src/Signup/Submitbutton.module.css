@@ -12,5 +12,6 @@
 }
 
 .button:hover {
+    transition: 0.3s;
     filter: brightness(125%);
 }
