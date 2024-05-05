@@ -6,6 +6,8 @@ import NotFound from './components/NotFound'
 import Idfind from './find/Idfind'
 import Pwmodify from './find/Pwmodify'
 import ChatbotMain from './Pages/Chatbotmain'
+import Imageanalysis from './Pages/Imageanalysis'
+import Home from './Home/Home'
 
 const router = createBrowserRouter([
   {
@@ -26,8 +28,16 @@ const router = createBrowserRouter([
     element: <Pwmodify />
   },
   {
-    path: '/',
+    path: '/chat',
     element: <ChatbotMain />
+  },
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/Imageanalysis',
+    element: <Imageanalysis />
   },
 ])
 

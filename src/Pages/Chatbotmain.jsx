@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Header from "../Header/Header";
 import styles from "./Chatbotmain.module.css";
+import Mainheader from "../Header/Mainheader";
 
 export default function Chat() {
     const [chatHistory, setChatHistory] = useState([]);
@@ -84,7 +84,7 @@ export default function Chat() {
 
     return (
         <main className={styles.container}>
-            <Header />
+            <Mainheader />
             <div className={styles.chatting}>
                 <div className={styles.chathistory}>
                     {chatHistory.map((chat, index) => (
