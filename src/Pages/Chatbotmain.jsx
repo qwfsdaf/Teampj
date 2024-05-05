@@ -85,6 +85,7 @@ export default function Chat() {
     return (
         <main className={styles.container}>
             <Mainheader />
+            <div className={styles.logo}></div>
             <div className={styles.chatting}>
                 <div className={styles.chathistory}>
                     {chatHistory.map((chat, index) => (
@@ -96,6 +97,7 @@ export default function Chat() {
                     <div ref={endOfMessagesRef} />
                 </div>
                 <form className={styles.chatform} onSubmit={handleFormSubmit}>
+
                     <div className={styles.nav}>
                         <input
                             className={styles.input}
