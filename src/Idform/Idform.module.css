@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    min-width: 350px;
+    height: 15%;
+    min-height: 60px;
+    max-height: 180px;
+    width: 100%;
+    height: 30%;
+    border: 1px solid var(--color-bord);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    color: var(--color-accent);
+    width: 90%;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.nickname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    min-width: 350px;
+    height: 20%;
+    min-height: 60px;
+    max-height: 120px;
+    width: 100%;
+    border: 1px solid var(--color-bord);
+    border-radius: 12px;
+    margin-bottom: 5%;
+    margin-top: 20px;
+    background-color: var(--color-white);
+    overflow-y: scroll;
+}
