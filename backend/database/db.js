@@ -16,7 +16,7 @@ function getConnection(cb) {
             return;
         }
         cb(conn);
-        console.log('a')
+        console.log('디비연결완')
     });
 }
 module.exports = getConnection;
