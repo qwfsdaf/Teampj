@@ -26,6 +26,7 @@
     /* 세로 방향으로 중앙 정렬 */
     position: absolute;
     margin-bottom: 48px;
+    z-index: -1;
 }
 
 @media (min-width: 900px) {
@@ -48,6 +49,7 @@
         /* 세로 방향으로 중앙 정렬 */
         position: absolute;
         margin-bottom: 48px;
+        z-index: -1;
     }
 }
 
