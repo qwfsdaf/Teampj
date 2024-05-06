@@ -1,6 +1,6 @@
-const mysql = require('mysql');
+import mysql from 'mysql'
 
-const pool = mysql.createPool({
+const db = mysql.createPool({
     host: '172.30.1.87',
     port: 3306,
     user: 'root',
@@ -10,7 +10,7 @@ const pool = mysql.createPool({
 });
 
 function getConnection(cb) {
-    pool.getConnection((err, conn) => {
+    db.getConnection((err, conn) => {
         if(err) {
             console.log(err);
             return;
@@ -19,4 +19,6 @@ function getConnection(cb) {
         console.log('디비연결완')
     });
 }
-module.exports = getConnection;
+
+export default getConnection;
+export { db };

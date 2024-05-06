@@ -1,20 +1,26 @@
-const express = require('express');
-const cors = require("cors");
+import express from 'express'
+import cors from 'cors'
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path'
+import { db } from './database/db.js'
 
-
-//const bodyParser = require('body-parser');
-//const path = require('path');
-// const { renderFile } = require('ejs');
-//const nunjucks = require('nunjucks');
-//const { parentPort } = require('worker_threads');
-
-const db = require('./userDB');
-
+const port = 3001;
 const app = express();
-const port = 3000;
 
-// body-parser 설정
-app.use(bodyParser.urlencoded({ extended: true }));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// 라우터 설정
+import userRouter from './routes/userRouter.js'
+app.use('/api', userRouter); 
+
+// 정적 리소스 제공
+app.use(express.static(path.join(__dirname, '../src')));
+
+// 모든 경로에 대해 index.html을 제공
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/index.html'));
+});
 
 app.use(express.json());
 app.use(cors({
@@ -22,31 +28,6 @@ app.use(cors({
     credentials: true,
 }));
 
-
-// 라우터 설정
-const userRouter = require('./backend/routes/userRouter');
-app.use('/api', loginRouter); 
-
-// 쿠키 파서 설정
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
-
-// 정적 파일 경로 설정
-app.use('/src', express.static(path.join(__dirname, 'src')));
-
-// 뷰 엔진 설정
-app.engine('jsx', renderFile);
-app.set('view engine', 'jsx');
-app.set('views', path.join(__dirname, 'views'));
-
-// 데이터베이스 설정
-app.get('/', (req, res) => {
-    db.query('SELECT * FROM *', function (err, results, fields) {
-        if (err) throw err;
-        res.send(results);
-    });
-});
-
 app.listen(port, () => {
-    console.log(`서버 실행 포트번호 ${port}`);
+    console.log(`Server is running on port ${port}`);
 });

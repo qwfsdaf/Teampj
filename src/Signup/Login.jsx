@@ -7,50 +7,9 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 const Login = () => {
-    const [id, setId] = useState('');
-    const [pw, setPw] = useState('');
-    const useLink = Link();
-
-    const handleSubmit = async () => {
-        if (id === '' || pw === '') {
-            alert('아이디 또는 비밀번호를 입력해주시기 바랍니다');
-            return
-        } else {
-            try {
-                const res = await fetch('/api/loginCheck', {
-                    method: 'POST',
-                    body: JSON.stringify({userID: id, userPW: pw}),
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                });
-                const data = await res.json();
-                
-                alert(data);
-                if (res.status === 200) {
-                    useLink('/main');
-                } else {
-                    setId('');
-                    setPw('');
-                    return;
-                }
-            } catch(err) {
-                console.log(err);
-            }
-        }
-    }
-
-    const moveSignUP = () => {
-        useLink('/signup');
-    }
-
-
-function Signup() {
     const [formData, setFormData] = useState({
         id: '',
         password: '',
-        // 추가 필드
     });
 
     const handleChange = (e) => {
@@ -60,6 +19,52 @@ function Signup() {
             [name]: value
         }));
     };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const { id, password } = formData;
+        if (id === '' || password === '') {
+            alert('아이디 또는 비밀번호를 입력해 주시기 바랍니다.');
+            return;
+        } else {
+            try {
+                const res = await fetch('/api/loginCheck', {
+                    method: 'POST',
+                    body: JSON.stringify({ userID: id, userPW: password }),
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                });
+                const data = await res.json();
+                
+                alert(data);
+                if (res.status === 200) {
+                    // 로그인 성공시 처리
+                } else {
+                    setFormData({ id: '', password: '' });
+                    return;
+                }
+            } catch(err) {
+                console.log(err);
+            }
+        }
+    };
+
+// function Signup() {
+//     const [formData, setFormData] = useState({
+//         id: '',
+//         password: '',
+//         // 추가 필드
+//     });
+
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormData(prevState => ({
+    //         ...prevState,
+    //         [name]: value
+    //     }));
+    // };
 
     // 폼 제출 핸들러
     // const handleSubmit = (e) => {
