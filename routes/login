@@ -20,7 +20,7 @@ router.use(session({
 router.get('/', async (req, res) => {
     const user = req.session;
     console.log(user.user);
-    res.render('index', {user});
+    res.render('../src/Signup/Login', {user});
     });
 
 router.post('/', async (req, res) => {
@@ -48,11 +48,11 @@ router.post('/', async (req, res) => {
                     console.log(req.session);
                     console.log(row[0].house)
 
-                    res.redirect('/hogwarts/main');
+                    //res.redirect('/hogwarts/main');
                 }
             }else {
                 console.log('아이디가 존재하지 않습니다');
-                res.send("<script>alert('등록되지 않은 학생입니다'); history.back();</script>");
+                res.send("<script>alert('아이디가 존재하지 않습니다.'); history.back();</script>");
             }
         });
         conn.release();

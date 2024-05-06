@@ -80,3 +80,5 @@ function Signup() {
 }
 
 export default Signup
+
+module.exports = Login;

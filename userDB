@@ -1,11 +1,11 @@
-const maria = require('mysql');
+const mysql = require('mysql');
 
-const pool = maria.createPool({
-    host: 'localhost',
+const pool = mysql.createPool({
+    host: '172.30.1.87',
     port: 3306,
     user: 'root',
-    password: '0317',
-    database: 'uiuxboard',
+    password: '1234',
+    database: 'capstone_db',
     connectionLimit: 5
 });
 
@@ -16,6 +16,7 @@ function getConnection(cb) {
             return;
         }
         cb(conn);
+        console.log('a')
     });
 }
 module.exports = getConnection;
