@@ -9,9 +9,9 @@ import { useState } from 'react'
 const Login = () => {
     const [id, setId] = useState('');
     const [pw, setPw] = useState('');
-    const navigate = useNavigate();
+    const useLink = Link();
 
-    const loginSubmit = async () => {
+    const handleSubmit = async () => {
         if (id === '' || pw === '') {
             alert('아이디 또는 비밀번호를 입력해주시기 바랍니다');
             return
@@ -29,7 +29,7 @@ const Login = () => {
                 
                 alert(data);
                 if (res.status === 200) {
-                    navigate('/main');
+                    useLink('/main');
                 } else {
                     setId('');
                     setPw('');
@@ -42,7 +42,7 @@ const Login = () => {
     }
 
     const moveSignUP = () => {
-        navigate('/signup');
+        useLink('/signup');
     }
 
 
@@ -62,10 +62,10 @@ function Signup() {
     };
 
     // 폼 제출 핸들러
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // 폼 데이터 처리 로직
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     // 폼 데이터 처리 로직
+    // };
 
     return (
         <>
