@@ -15,11 +15,11 @@ import userRouter from './routes/userRouter.js'
 app.use('/api', userRouter); 
 
 // 정적 리소스 제공
-app.use(express.static(path.join(__dirname, '../src')));
+app.use(express.static(path.join(__dirname, '../build')));
 
 // 모든 경로에 대해 index.html을 제공
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/index.html'));
+    res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 app.use(express.json());

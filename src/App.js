@@ -1,13 +1,13 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Idform from './Idform/Idform'
-import Login from './Signup/Login'
-import NotFound from './components/NotFound'
-import Idfind from './find/Idfind'
-import Pwmodify from './find/Pwmodify'
-import ChatbotMain from './Pages/Chatbotmain'
-import Imageanalysis from './Pages/Imageanalysis'
-import Home from './Home/Home'
+import Idform from './Idform/Idform.jsx'
+import Login from './Signup/Login.jsx'
+import NotFound from './components/NotFound.jsx'
+import Idfind from './find/Idfind.jsx'
+import Pwmodify from './find/Pwmodify.jsx'
+import ChatbotMain from './Pages/Chatbotmain.jsx'
+import Imageanalysis from './Pages/Imageanalysis.jsx'
+import Home from './Home/Home.jsx'
 
 const router = createBrowserRouter([
   {
