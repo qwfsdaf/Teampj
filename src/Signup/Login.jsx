@@ -21,16 +21,15 @@ const Login = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const { id, password } = formData;
-        if (id === '' || password === '') {
+        e.preventDefault(); // 폼의 기본 동작 중지
+        if (formData.id === '' || formData.password === '') {
             alert('아이디 또는 비밀번호를 입력해 주시기 바랍니다.');
             return;
         } else {
             try {
                 const res = await fetch('/api/loginCheck', {
                     method: 'POST',
-                    body: JSON.stringify({ userID: id, userPW: password }),
+                    body: JSON.stringify({ userID: formData.id, userPW: formData.password }), // 수정된 부분
                     credentials: 'include',
                     headers: {
                         'Content-Type': 'application/json'
@@ -50,6 +49,7 @@ const Login = () => {
             }
         }
     };
+};
 
 // function Signup() {
 //     const [formData, setFormData] = useState({
@@ -64,12 +64,6 @@ const Login = () => {
     //         ...prevState,
     //         [name]: value
     //     }));
-    // };
-
-    // 폼 제출 핸들러
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // 폼 데이터 처리 로직
     // };
 
     return (
@@ -102,6 +96,7 @@ const Login = () => {
                 <Submitbutton
                     url="/"
                     title="로그인"
+                    onClick={handleSubmit}
                     onValidate={() => {
                         const idRegex = /^[A-Za-z][A-Za-z0-9]*$/;
                         const passwordRegex = /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
