@@ -107,7 +107,9 @@ export default function Chat() {
                             onChange={handleInputChange}
                             placeholder="무엇이든 세로에게 물어보세요!"
                         />
-                        <button className={styles.button} type="submit"><FiSend /></button>
+                        <button className={styles.button} type="submit">
+                            <div className={styles.icons}><FiSend /></div>
+                        </button>
                     </div>
                 </form>
             </div>

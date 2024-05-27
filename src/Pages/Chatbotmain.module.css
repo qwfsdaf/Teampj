@@ -73,6 +73,7 @@
     /* 채팅 히스토리의 최대 높이를 설정, 필요에 따라 조정 */
     overflow-y: auto;
     /* 내용이 넘칠 경우 스크롤바 생성 */
+    margin-left: 5px;
 }
 
 .messagebox {
@@ -102,7 +103,25 @@
     /* 사용자 메시지는 오른쪽 정렬 */
     background-color: var(--color-accent);
     /* 사용자 메시지 배경색 */
-    color: var(--color-white)
+    color: var(--color-white);
+    border-radius: .4em;
+    position: relative;
+    /* 필요한 상대적 위치 지정 */
+    padding: 10px;
+    /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
+}
+.userMessage:after {
+	content: '';
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-left-color: var(--color-accent);
+	border-right: 0;
+	margin-top: -10px;
+	margin-right: -13px;
 }
 
 .botMessage {
@@ -110,6 +129,24 @@
     /* 봇 메시지는 왼쪽 정렬 */
     background-color: var(--color-chatbot);
     /* 봇 메시지 배경색 */
+    border-radius: .4em;
+    position: relative;
+    /* 필요한 상대적 위치 지정 */
+    padding: 10px;
+    /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
+}
+.botMessage:after {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-right-color: var(--color-chatbot);
+	border-left: 0;
+	margin-top: -10px;
+	margin-left: -13px;
 }
 
 .chatform {
@@ -153,7 +190,6 @@
     height: 40px;
     border: none;
     outline: none;
-    font-size: 1.4rem;
     color: var(--color-white);
     background-color: #ffe276;
     border-radius: 9999px;
@@ -200,4 +236,14 @@
     height: 20px;
     animation: spinner 1s linear infinite;
     margin: 5px auto;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    font-size: 2rem;
+    margin-right: 2px;
 }
