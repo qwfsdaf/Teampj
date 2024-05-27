@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Sidebar.module.css';
 import { IoIosMenu } from "react-icons/io";
-import SidebarSelect from './SidebarSelete'
+import SidebarSelect from './SidebarSelete'; // SidebarSelete 오타 수정
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
     const navigate = useNavigate();
 
     const handleClick = (e) => {

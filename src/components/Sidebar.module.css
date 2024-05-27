@@ -8,9 +8,34 @@
     width: 250px;
     height: 100%;
     background-color: var(--color-white);
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
     /* 부드러운 애니메이션 */
     border-radius: 10px;
+    z-index: 1;
+    /*box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    z-index : 100;*/
+}
+
+.sidebarclick {
+    position: fixed;
+    top: 48px;
+    right: -250px;
+    /* 기본적으로 숨긴 상태 */
+    width: 250px;
+    height: 100%;
+    background-color: var(--color-white);
+    transition: right 0.5s ease;
+    /* 부드러운 애니메이션 */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+@media (min-width: 600px) {
+    .sidebar {
+        right: -40%;
+        width: 40%;
+    }
 }
 
 .sidebar.open {
@@ -21,6 +46,7 @@
 .sidebarContent {
     height: 100%;
     padding: 16px;
+    
 }
 
 .closeButton {
@@ -45,6 +71,7 @@
     border: none;
     background-color: inherit;
     font-size: 2.2rem;
+    transition: 0.3 linear;
 }
 
 .closebutton {
@@ -66,6 +93,7 @@
     height: 6%;
     border-radius: 5px;
     padding-left: 20px;
+    font-size: 0.85rem;
 }
 
 .sidebarcontainer {
@@ -73,4 +101,5 @@
     height: 7%;
     border-bottom: 1px solid var(--color-line);
     margin-top: 30px;
+    font-family: "Noto Sans KR", sans-serif;
 }
