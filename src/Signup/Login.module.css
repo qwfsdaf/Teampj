@@ -45,21 +45,26 @@
     border-bottom: 0.7px solid #ccc9c9;
 }
 
-.Link hr{
-    display: inline;
-    width: 9px !important;
-    border: 0.5px solid #ccc9c9;
-    background-color: none;
-    transform: rotate(90deg);
+.divider {
+    margin-top: 3px;
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
 }
-
-.idfind {
+@media (min-width: 600px) {
+    .divider {
+        margin-top: 6px;
+    }
+}
+.idfind, .pwfind {
     /* padding-right: 30px; */
     /* border-right: 1px solid var(--color-text); */
     color: var(--color-accent);
 }
-
-.pwfind {
-    /* padding-left: 30px; */
-    color: var(--color-accent);
+@media (min-width: 600px) {
+    .idfind, 
+    .pwfind {
+        font-size: 0.9rem;
+        
+    }
 }
