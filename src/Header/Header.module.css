@@ -22,6 +22,8 @@
 }
 
 .logo {
+    outline: none;
+    background: inherit;
     padding: 0 1rem;
     color: var(--color-accent);
 }
