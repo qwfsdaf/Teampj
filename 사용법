@@ -1,0 +1,6 @@
+
+1. teampj/backend 경로에서 npm install
+1-1. .env에 챗봇, 이미지인식 키 입력
+2. 패키지 설치 오류 뜰 시 npm install express cors multer axios dotenv teampj/backend에서 실행
+3. teampj경로에서 npm run build 실행
+4. teampj/backend 경로에서 node server.js 입력
