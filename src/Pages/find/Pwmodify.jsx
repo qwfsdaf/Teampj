@@ -91,7 +91,11 @@ function Pwmodify() {
                 <Submitbutton onValidate={() => {
                     const isPasswordMatch = formData.password !== formData.mopassword;
                     return isPasswordMatch;
+<<<<<<< HEAD
                 }} url="/Login" title="비밀번호 변경" />
+=======
+                }} url="/Login" title="변경하기" />
+>>>>>>> 0af4cd9fd0c5344a6c6af2089fb662aa54f85ae8
             </form>
         </>
     )

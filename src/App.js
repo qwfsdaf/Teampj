@@ -8,6 +8,8 @@ import Pwmodify from './find/Pwmodify'
 import ChatbotMain from './Pages/Chatbotmain'
 import Imageanalysis from './Pages/Imageanalysis'
 import Home from './Home/Home'
+import Mypage from './Pages/Mypage'
+import Silder from './components/Silder'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
   {
     path: '/Imageanalysis',
     element: <Imageanalysis />
+  },
+  {
+    path: '/Mypage',
+    element: <Mypage />
+  },
+  {
+    path: '/test',
+    element: <Silder />
   },
 ])
 

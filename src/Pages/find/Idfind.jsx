@@ -1,13 +1,11 @@
 import React from 'react'
-import Header from '../Header/Header'
-import styles from './Login.module.css'
+import styles from './Idfind.module.css'
 import Logininput from '../components/Logininput'
-import Submitbutton from './Submitbutton'
-import { Link } from 'react-router-dom'
+import Submitbutton from '../Signup/Submitbutton'
+import Header from '../Header/Header'
 import { useState } from 'react'
 
-
-function Signup() {
+function Idfind() {
     const [formData, setFormData] = useState({
         id: '',
         password: '',
@@ -27,7 +25,6 @@ function Signup() {
         e.preventDefault();
         // 폼 데이터 처리 로직
     };
-
     return (
         <>
             <Header />
@@ -55,29 +52,26 @@ function Signup() {
                         iconsspan={"material-symbols-outlined"}
                     />
                 </div>
-                <Submitbutton
-                    url="/"
-                    title="로그인"
-                    onValidate={() => {
-                        const idRegex = /^[A-Za-z][A-Za-z0-9]*$/;
-                        const passwordRegex = /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-                        const isIdValid = idRegex.test(formData.id);
-                        const isPasswordValid = passwordRegex.test(formData.password);
-
-                        return isIdValid && isPasswordValid;
-                    }}
-
-                />
-                <div className={styles.Link}>
-                    <Link className={styles.idfind} to='/Idfind'>아이디 찾기</Link>
-                    <hr class="centerline"></hr>
-                    <Link className={styles.pwfind} to='/Pwmodify'>비밀번호 변경</Link>
+<<<<<<< HEAD
+=======
+                <div className={styles.nickname}>
+                    <Logininput
+                        type="nickname"
+                        name="nickname"
+                        placeholder="닉네임"
+                        value={formData.nickname}
+                        onChange={handleChange}
+                        icon={"person"}
+                        icons={"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"}
+                        iconsspan={"material-symbols-outlined"}
+                    />
                 </div>
-                <Submitbutton url="/Signup" title="회원가입" onValidate={() => { return true }} />
+>>>>>>> 0af4cd9fd0c5344a6c6af2089fb662aa54f85ae8
+                <div className={styles.border}></div>
+                <Submitbutton onValidate={() => true} url="/Login" title="아이디 찾기" />
             </form>
         </>
     )
 }
 
-export default Signup
+export default Idfind

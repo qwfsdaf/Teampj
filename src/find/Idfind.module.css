@@ -42,7 +42,7 @@
     max-width: 800px;
     min-width: 350px;
     height: 10%;
-    min-height: 100px;
+    min-height: 80px;
     max-height: 170px;
     width: 100%;
     border: 1px solid var(--color-bord);

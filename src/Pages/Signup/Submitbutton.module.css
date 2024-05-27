@@ -9,6 +9,7 @@
     color: var(--color-white);
     border-radius: 8px;
     margin-top: 10%;
+<<<<<<< HEAD
     font-size: 1.05rem;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -26,4 +27,10 @@ a{
 .button:hover {
     background-color: #4f87af;
     transition: 0.5s;
+=======
+}
+
+.button:hover {
+    filter: brightness(125%);
+>>>>>>> 0af4cd9fd0c5344a6c6af2089fb662aa54f85ae8
 }
