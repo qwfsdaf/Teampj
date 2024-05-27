@@ -74,6 +74,7 @@
     overflow-y: auto;
     /* 내용이 넘칠 경우 스크롤바 생성 */
     margin-left: 5px;
+    margin-left: 5px;
 }
 
 .messagebox {
@@ -122,6 +123,25 @@
 	border-right: 0;
 	margin-top: -10px;
 	margin-right: -13px;
+    color: var(--color-white);
+    border-radius: .4em;
+    position: relative;
+    /* 필요한 상대적 위치 지정 */
+    padding: 10px;
+    /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
+}
+.userMessage:after {
+	content: '';
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-left-color: var(--color-accent);
+	border-right: 0;
+	margin-top: -10px;
+	margin-right: -13px;
 }
 
 .botMessage {
@@ -129,6 +149,24 @@
     /* 봇 메시지는 왼쪽 정렬 */
     background-color: var(--color-chatbot);
     /* 봇 메시지 배경색 */
+    border-radius: .4em;
+    position: relative;
+    /* 필요한 상대적 위치 지정 */
+    padding: 10px;
+    /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
+}
+.botMessage:after {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-right-color: var(--color-chatbot);
+	border-left: 0;
+	margin-top: -10px;
+	margin-left: -13px;
     border-radius: .4em;
     position: relative;
     /* 필요한 상대적 위치 지정 */
