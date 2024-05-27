@@ -9,7 +9,7 @@ import ChatbotMain from './Pages/Chatbotmain.jsx'
 import Imageanalysis from './Pages/Imageanalysis.jsx'
 import Home from './Home/Home.jsx'
 import Mypage from './Pages/Mypage.jsx'
-import Silder from './components/Silder.jsx'
+import Test from './Pages/Test.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/test',
-    element: <Silder />
+    element: <Test />
   },
 ])
 

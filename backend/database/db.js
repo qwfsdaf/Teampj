@@ -11,7 +11,7 @@ const db = mysql.createPool({
 
 function getConnection(cb) {
     db.getConnection((err, conn) => {
-        if(err) {
+        if (err) {
             console.log(err); // 연결 실패 시 오류 로그 출력
             return;
         }

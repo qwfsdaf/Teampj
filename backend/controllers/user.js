@@ -3,7 +3,7 @@ import { Idform, getUser } from '../models/userDB.js'; // DB 모델 함수
 
 // 회원가입 로직
 export async function signup(req, res) {
-    
+
     const { user_id, user_pw, user_email, user_nickname } = req.body;
     try {
         const existingUser = await getUser(user_id);

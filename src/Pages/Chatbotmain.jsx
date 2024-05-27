@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Chatbotmain.module.css";
-import Mainheader from "../Header/Mainheader";
 import { FiSend } from "react-icons/fi";
+import Header from "../Header/Header";
 
 export default function Chat() {
     const [chatHistory, setChatHistory] = useState([]);
@@ -85,7 +85,7 @@ export default function Chat() {
 
     return (
         <main className={styles.container}>
-            <Mainheader />
+            <Header />
             <div className={styles.logo}></div>
             <div className={styles.chatting}>
                 <div className={styles.chathistory}>
