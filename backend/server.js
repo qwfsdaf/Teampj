@@ -12,6 +12,7 @@ const __dirname = dirname(__filename);
 
 // 라우터 설정
 import userRouter from './routes/userRouter.js'
+
 // 먼저 JSON 미들웨어 사용
 app.use(express.json());
 app.use('/api', userRouter); 
