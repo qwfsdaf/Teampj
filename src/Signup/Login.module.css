@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    min-width: 350px;
+    height: 15%;
+    min-height: 60px;
+    max-height: 170px;
+    width: 100%;
+    border: 1px solid var(--color-bord);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    overflow-y: scroll;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    color: var(--color-accent);
+    width: 90%;
+    border-bottom: 1px solid var(--color-line);
+
+}
+
+.Link {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    max-width: 800px;
+    min-width: 350px;
+    padding: 5% 32% 7% 32%;
+    border-bottom: 0.7px solid #ccc9c9;
+}
+
+.Link hr{
+    display: inline;
+    width: 9px !important;
+    border: 0.5px solid #ccc9c9;
+    background-color: none;
+    transform: rotate(90deg);
+}
+
+.idfind {
+    /* padding-right: 30px; */
+    /* border-right: 1px solid var(--color-text); */
+    color: var(--color-accent);
+}
+
+.pwfind {
+    /* padding-left: 30px; */
+    color: var(--color-accent);
+}
