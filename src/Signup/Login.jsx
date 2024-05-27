@@ -6,10 +6,12 @@ import Submitbutton from './Submitbutton'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const Login = () => {
+
+function Signup() {
     const [formData, setFormData] = useState({
         id: '',
         password: '',
+        // 추가 필드
     });
 
     const handleChange = (e) => {
@@ -20,51 +22,11 @@ const Login = () => {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // 폼의 기본 동작 중지
-        if (formData.id === '' || formData.password === '') {
-            alert('아이디 또는 비밀번호를 입력해 주시기 바랍니다.');
-            return;
-        } else {
-            try {
-                const res = await fetch('/api/loginCheck', {
-                    method: 'POST',
-                    body: JSON.stringify({ userID: formData.id, userPW: formData.password }), // 수정된 부분
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                });
-                const data = await res.json();
-                
-                alert(data);
-                if (res.status === 200) {
-                    // 로그인 성공시 처리
-                } else {
-                    setFormData({ id: '', password: '' });
-                    return;
-                }
-            } catch(err) {
-                console.log(err);
-            }
-        }
+    // 폼 제출 핸들러
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // 폼 데이터 처리 로직
     };
-};
-
-// function Signup() {
-//     const [formData, setFormData] = useState({
-//         id: '',
-//         password: '',
-//         // 추가 필드
-//     });
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData(prevState => ({
-    //         ...prevState,
-    //         [name]: value
-    //     }));
-    // };
 
     return (
         <>
@@ -96,7 +58,6 @@ const Login = () => {
                 <Submitbutton
                     url="/"
                     title="로그인"
-                    onClick={handleSubmit}
                     onValidate={() => {
                         const idRegex = /^[A-Za-z][A-Za-z0-9]*$/;
                         const passwordRegex = /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -118,6 +79,4 @@ const Login = () => {
     )
 }
 
-export default Login
-
-//module.exports = Login;
+export default Signup

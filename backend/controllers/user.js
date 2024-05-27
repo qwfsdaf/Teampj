@@ -1,69 +1,43 @@
 import bcrypt from 'bcrypt';
-import { Idform } from '../models/userDB.js';
+import { Idform, getUser } from '../models/userDB.js'; // DB 모델 함수
 
-// 회원가입
-const textToHash = async (text) => {
-    const saltRounds = 10;
-
+// 회원가입 로직
+export async function signup(req, res) {
+    
+    const { user_id, user_pw, user_email, user_nickname } = req.body;
     try {
-        const hash = await bcrypt.hash(text, saltRounds);
-        return hash;
-    } catch (err) {
-        console.error(err);
-        return err;
-    }
-};
-
-export const signup = async (req, res) => {
-    const { userID, userPW } = req.body;
-
-    try {
-        const user = await Idform(userID);
-        if (user) {
-            res.status(401).json('이미 존재하는 아이디입니다.');
-            return;
+        const existingUser = await getUser(user_id);
+        if (existingUser.length > 0) {
+            return res.status(409).send('User already exists');
         }
-
-        const hash = await textToHash(userPW);
-        await Idform([userID, hash]);
-        res.status(200).json('회원가입 완료');
-    } catch (err) {
-        console.error(err);
-        res.status(500).json(err);
+        const hashedPassword = await bcrypt.hash(user_pw, 10);
+        await Idform([user_id, hashedPassword, user_email, user_nickname]);
+        res.status(201).send('User created successfully');
+    } catch (error) {
+        console.error('Error in signup:', error);
+        res.status(500).send('Server error');
     }
-};
+}
 
-// 로그인
-const hashCompare = async (inputValue, hash) => {
-    try {
-        const isMatch = await bcrypt.compare(inputValue, hash);
-        return isMatch;
-    } catch (err) {
-        console.error(err);
-        return err;
-    }
-};
-
-export const loginCheck = async (req, res) => {
-    const { userID, userPW } = req.body;
+// 로그인 로직
+export async function loginCheck(req, res) {
+    const { user_id, user_pw } = req.body;
 
     try {
-        const user = await Idform(userID);
+        const [user] = await getUser(user_id);
         if (!user) {
-            res.status(401).json('존재하지 않는 아이디입니다.');
+            res.status(401).json({ message: '존재하지 않는 아이디입니다.' });
             return;
         }
 
-        const hash = user.userPW;
-        const isMatch = await hashCompare(userPW, hash);
-
+        const isMatch = await bcrypt.compare(user_pw, user.user_pw);
         if (!isMatch) {
-            res.status(401).json('비밀번호가 일치하지 않습니다.');
+            res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
             return;
         }
-        res.status(200).json('로그인 성공');
+        res.status(200).json({ message: '로그인 성공', user: { user_id } });
     } catch (err) {
         console.error(err);
-        res.status(500).json(err);
+        res.status(500).json({ message: '서버 오류' });
     }
-};
+}
