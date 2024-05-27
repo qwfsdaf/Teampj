@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Chatbotmain.module.css";
 import Mainheader from "../Header/Mainheader";
+import { FiSend } from "react-icons/fi";
 
 export default function Chat() {
     const [chatHistory, setChatHistory] = useState([]);
@@ -106,7 +107,7 @@ export default function Chat() {
                             onChange={handleInputChange}
                             placeholder="무엇이든 세로에게 물어보세요!"
                         />
-                        <button className={styles.button} type="submit"></button>
+                        <button className={styles.button} type="submit"><FiSend /></button>
                     </div>
                 </form>
             </div>
