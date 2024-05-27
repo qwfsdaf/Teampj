@@ -40,12 +40,17 @@
 }
 
 .startbutton {
-    width: 20%;
+    max-width: 800px;
+    min-width: 300px;
+    width: 30%;
     height: 10%;
+    min-height: 80px;
+    max-height: 170px;
     outline: none;
     color: var(--color-white);
     background: var(--color-accent);
     border-radius: 50px;
+    font-size:  0.95rem;
 }
 
 .saveform {

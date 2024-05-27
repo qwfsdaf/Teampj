@@ -141,6 +141,7 @@
     outline: none;
     background-color: transparent;
     padding-left: 10px;
+    margin-left: 5px;
 }
 
 .button {
@@ -153,7 +154,7 @@
     border: none;
     outline: none;
     color: var(--color-white);
-    background-color: #FFDA55;
+    background-color: #ffe276;
     border-radius: 9999px;
     margin-right: 10px;
 }

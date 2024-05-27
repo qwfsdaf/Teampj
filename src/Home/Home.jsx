@@ -23,8 +23,8 @@ function Home() {
             <div className={styles.pclogo}></div>
             <div className={styles.subcontainer}>
                 <div className={styles.titlebox}>
-                    <p className={styles.title}>세탁 관련 궁금증,</p>
-                    <p className={styles.title}>무엇이든 세로에게 물어보세요!</p>
+                    <p className={styles.title}>당신의 AI 세탁 도우미</p>
+                    <p className={styles.title}>세로에게 물어보세요!</p>
                 </div>
                 <div className={styles.mobilelogo}></div>
                 <button
