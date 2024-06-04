@@ -1,12 +1,13 @@
 import mysql from 'mysql'
 
 const db = mysql.createPool({
-    host: '192.168.226.1',
-    port: 3306,
+    host: 'localhost',
+    port: 3307,
     user: 'root',
     password: '1234',
     database: 'capstone_db',
-    connectionLimit: 5
+    connectionLimit: 5,
+    connectTimeout: 10000
 });
 
 function getConnection(cb) {
@@ -22,3 +23,4 @@ function getConnection(cb) {
 
 export default getConnection;
 export { db };
+ 

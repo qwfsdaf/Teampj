@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Chatbotmain.module.css";
 import Mainheader from "../Header/Mainheader";
+import { FiSend } from "react-icons/fi";
 
 export default function Chat() {
     const [chatHistory, setChatHistory] = useState([]);
@@ -85,7 +86,7 @@ export default function Chat() {
     return (
         <main className={styles.container}>
             <Mainheader />
-            <div className={styles.logo}></div>
+            <div className={styles.logo}> <image link=""> </image></div>
             <div className={styles.chatting}>
                 <div className={styles.chathistory}>
                     {chatHistory.map((chat, index) => (
@@ -106,7 +107,9 @@ export default function Chat() {
                             onChange={handleInputChange}
                             placeholder="무엇이든 세로에게 물어보세요!"
                         />
-                        <button className={styles.button} type="submit"></button>
+                        <button className={styles.button} type="submit">
+                            <div className={styles.icons}><FiSend /></div>
+                        </button>
                     </div>
                 </form>
             </div>

@@ -3,6 +3,7 @@ import cors from 'cors'
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path'
 import getConnection from './database/db.js';
+import userRouter from './routes/userRouter.js'
 
 const port = 3001;
 const app = express();
@@ -11,11 +12,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // 라우터 설정
-import userRouter from './routes/userRouter.js'
+
 
 // 먼저 JSON 미들웨어 사용
 app.use(express.json());
-app.use('/api', userRouter); 
+app.use('/api', userRouter);
 
 // 정적 리소스 제공
 app.use(express.static(path.join(__dirname, '../build')));

@@ -1,0 +1,98 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: #F1F5F7;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+ul li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container .quiz_title{
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 3.2rem;
+    color: #4F9FD8;
+}
+
+.container .quiz_subtitle{
+    margin-top: 1%;
+     font-weight: 500;
+     font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+}
+
+.container .quiz_menu p{
+    display: inline;
+}
+
+.container .quiz_menu ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 5%;
+}
+
+.container .quiz_menu ul li{
+    cursor: pointer;
+    display: block;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 340px;
+    height: 340px;
+}
+
+.container .quiz_menu ul li{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.container .quiz_menu ul li div{
+    padding-bottom: 4%;
+}
+
+.container .quiz_menu ul li #quiz_menu_O{
+    color: #4F9FD8;
+    font-size: 4.2rem;
+    font-weight: 1000;
+}
+
+.container .quiz_menu ul li #quiz_menu_X{
+    color: #FFDA55;
+    font-size: 4.2rem;
+    font-weight: 1000;
+}
+
+.container .quiz_menu ul li #quiz_menu_quiz{
+    margin-top: -5px;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+.container .quiz_menu ul li #quiz_menu_sign{
+    color: #4F9FD8;
+    font-size: 3.5rem;
+    font-weight: 1000;
+}
+
+.container .quiz_menu ul li:hover{
+    transition: 0.3s;
+    border-radius: 50%;
+}

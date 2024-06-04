@@ -52,18 +52,6 @@ function Idfind() {
                         iconsspan={"material-symbols-outlined"}
                     />
                 </div>
-                <div className={styles.nickname}>
-                    <Logininput
-                        type="nickname"
-                        name="nickname"
-                        placeholder="닉네임"
-                        value={formData.nickname}
-                        onChange={handleChange}
-                        icon={"person"}
-                        icons={"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"}
-                        iconsspan={"material-symbols-outlined"}
-                    />
-                </div>
                 <div className={styles.border}></div>
                 <Submitbutton onValidate={() => true} url="/Login" title="아이디 찾기" />
             </form>

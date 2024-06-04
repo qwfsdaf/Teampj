@@ -1,16 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './Submitbutton.module.css';
+import styles from './SidebarSelete.module.css';
 
-function Submitbutton({ title, url, onValidate }) {
+function SidebarSelete({ title, url }) {
     const navigate = useNavigate();
 
     const handleClick = (e) => {
         e.preventDefault(); // 기본 이벤트를 방지합니다.
 
-        // 유효성 검사를 실행합니다. 검사가 성공하면 페이지 이동을 수행합니다.
-        if (onValidate && onValidate()) {
-            navigate(url);
-        }
+        navigate(url);
     };
 
     return (
@@ -24,4 +21,4 @@ function Submitbutton({ title, url, onValidate }) {
     );
 }
 
-export default Submitbutton;
+export default SidebarSelete;

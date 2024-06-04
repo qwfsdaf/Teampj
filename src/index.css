@@ -45,6 +45,7 @@ code {
 button {
   outline: none;
   border: none;
+  cursor: pointer !important;
 }
 
 * {

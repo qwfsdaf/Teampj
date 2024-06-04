@@ -70,8 +70,9 @@ function Signup() {
 
                 />
                 <div className={styles.Link}>
-                    <Link className={styles.idfind} to='/Idfind'>아이디찾기</Link>
-                    <Link className={styles.pwfind} to='/Pwmodify'>비밀번호변경</Link>
+                    <Link className={styles.idfind} to='/Idfind'>아이디 찾기</Link>
+                    <hr class="centerline"></hr>
+                    <Link className={styles.pwfind} to='/Pwmodify'>비밀번호 변경</Link>
                 </div>
                 <Submitbutton url="/Signup" title="회원가입" onValidate={() => { return true }} />
             </form>

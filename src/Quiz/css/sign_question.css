@@ -1,0 +1,66 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: #F1F5F7;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+ul li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 200px 0 200px;
+}
+
+.container .quiz_title{
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 3.2rem;
+    color: #4F9FD8;
+}
+
+.container .quiz_box{
+    margin-top: 2%;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .quiz_Q{
+    margin-top: 1%;
+     font-weight: 500;
+     font-size: 1.6rem;
+    text-align: center;
+    color: #333;
+}
+
+.container .quiz_A{
+    width: 300px;
+    height: 300px;
+    background-image: url(../symbols/careicon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container .answer_btn{
+    margin-top: 2%;
+    background-color: #4F9FD8;
+    border-radius: 20px;
+    padding: 3%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}

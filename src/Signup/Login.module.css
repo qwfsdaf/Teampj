@@ -31,27 +31,35 @@
     color: var(--color-accent);
     width: 90%;
     border-bottom: 1px solid var(--color-line);
+
 }
 
 .Link {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     width: 100%;
     max-width: 800px;
     min-width: 350px;
-    padding: 5%;
-    border-bottom: 1px solid var(--color-text);
+    padding: 5% 32% 7% 32%;
+    border-bottom: 0.7px solid #ccc9c9;
+}
 
+.Link hr{
+    display: inline;
+    width: 9px !important;
+    border: 0.5px solid #ccc9c9;
+    background-color: none;
+    transform: rotate(90deg);
 }
 
 .idfind {
-    padding-right: 30px;
-    border-right: 1px solid var(--color-text);
+    /* padding-right: 30px; */
+    /* border-right: 1px solid var(--color-text); */
     color: var(--color-accent);
 }
 
 .pwfind {
-    padding-left: 30px;
+    /* padding-left: 30px; */
     color: var(--color-accent);
 }
