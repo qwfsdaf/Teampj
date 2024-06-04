@@ -28,6 +28,10 @@
     color: var(--color-accent);
 }
 
+.title {
+    color: var(--color-accent);
+}
+
 .button:hover {
     filter: brightness(125%);
 }

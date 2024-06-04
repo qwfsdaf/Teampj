@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../Header/Header.module.css'
 import Sidebar from '../components/Sidebar';
 import { useNavigate } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ title, isSidebarOpen, onSidebarToggle }) {
 
     const navigate = useNavigate();
 
@@ -16,7 +16,8 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <button onClick={handleClick} className={styles.logo}>Logo</button>
-            <Sidebar />
+            <div className={styles.title}>{title}</div>
+            <Sidebar isOpen={isSidebarOpen} toggleSidebar={onSidebarToggle} />
         </header>
     )
 }

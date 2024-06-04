@@ -9,7 +9,8 @@ import ChatbotMain from './Pages/Chatbotmain.jsx'
 import Imageanalysis from './Pages/Imageanalysis.jsx'
 import Home from './Home/Home.jsx'
 import Mypage from './Pages/Mypage.jsx'
-import Test from './Pages/Test.jsx'
+import Community from './Community/Community.jsx'
+import Communitywrite from './Community/Communitywrite.jsx'
 
 const router = createBrowserRouter([
   {
@@ -46,9 +47,13 @@ const router = createBrowserRouter([
     element: <Mypage />
   },
   {
-    path: '/test',
-    element: <Test />
+    path: '/community',
+    element: <Community />
   },
+  {
+    path: '/communitywrite',
+    element: <Communitywrite />
+  }
 ])
 
 export default function App() {

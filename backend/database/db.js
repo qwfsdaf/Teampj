@@ -1,4 +1,4 @@
-import mysql from 'mysql'
+import mysql from 'mysql';
 
 const db = mysql.createPool({
     host: '192.168.226.1',
@@ -6,13 +6,14 @@ const db = mysql.createPool({
     user: 'root',
     password: '1234',
     database: 'capstone_db',
-    connectionLimit: 5
+    connectTimeout: 10000,
+    debug: true // 디버그 모드 활성화
 });
 
 function getConnection(cb) {
     db.getConnection((err, conn) => {
         if (err) {
-            console.log(err); // 연결 실패 시 오류 로그 출력
+            console.error('DB Connection Error:', err); // 연결 실패 시 상세 오류 로그 출력
             return;
         }
         cb(conn);

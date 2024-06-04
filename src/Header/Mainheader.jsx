@@ -20,6 +20,7 @@ function Mainheader() {
                 />
                 <Mainheaderbutton
                     title='커뮤니티'
+                    url='/community'
 
                 />
                 <Mainheaderbutton

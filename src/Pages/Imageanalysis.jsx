@@ -65,7 +65,7 @@ function Imageanalysis() {
 
     return (
         <main className={styles.container}>
-            <Header />
+            <Header title="세탁기호인식" />
             {!imageSrc ? (
                 <>
                     <input
