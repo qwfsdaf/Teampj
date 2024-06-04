@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Sidebar.module.css';
 import { IoIosMenu } from "react-icons/io";
-import SidebarSelect from './SidebarSelete'; // SidebarSelete 오타 수정
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
+import SidebarSelect from './SidebarSelect';
 
-const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
+const Sidebar = ({ isOpen, toggleSidebar }) => {
     const navigate = useNavigate();
 
     const handleClick = (e) => {
-        e.preventDefault(); // 기본 이벤트를 방지합니다.
-
+        e.preventDefault();
         navigate('/Login');
-    };
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
     };
 
     return (

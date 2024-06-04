@@ -2,11 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./Chatbotmain.module.css";
 import { FiSend } from "react-icons/fi";
 import Header from "../Header/Header";
+import img from "./icon 1 .png"
 
 export default function Chat() {
     const [chatHistory, setChatHistory] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const endOfMessagesRef = useRef(null); // 스크롤할 위치를 참조하기 위한 ref 생성
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(prevState => !prevState);
+    };
 
     const scrollToBottom = () => {
         endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -85,8 +92,10 @@ export default function Chat() {
 
     return (
         <main className={styles.container}>
-            <Header />
-            <div className={styles.logo}></div>
+            <Header isSidebarOpen={isSidebarOpen} onSidebarToggle={toggleSidebar} />
+            <div className={styles.logo}>
+                <img className={styles.img} src={img} alt="img1" />
+            </div>
             <div className={styles.chatting}>
                 <div className={styles.chathistory}>
                     {chatHistory.map((chat, index) => (

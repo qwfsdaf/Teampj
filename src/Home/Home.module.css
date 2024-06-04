@@ -82,6 +82,11 @@
         margin-bottom: 15px;
     }
 
+    .pcimg {
+        display: none;
+
+    }
+
 }
 
 @media (min-width: 900px) {
@@ -165,4 +170,23 @@
         border-radius: 50px;
         max-width: 350px;
     }
+
+    .pcimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 450px;
+        border: var(--color-accent);
+        outline: none;
+    }
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border: none;
 }

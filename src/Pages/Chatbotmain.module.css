@@ -112,31 +112,33 @@
     padding: 10px;
     /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
 }
+
 .userMessage:after {
-	content: '';
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 15px solid transparent;
-	border-left-color: var(--color-accent);
-	border-right: 0;
-	margin-top: -10px;
-	margin-right: -13px;
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: var(--color-accent);
+    border-right: 0;
+    margin-top: -10px;
+    margin-right: -13px;
 }
+
 .userMessage:after {
-	content: '';
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 15px solid transparent;
-	border-left-color: var(--color-accent);
-	border-right: 0;
-	margin-top: -10px;
-	margin-right: -13px;
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: var(--color-accent);
+    border-right: 0;
+    margin-top: -10px;
+    margin-right: -13px;
 }
 
 .botMessage {
@@ -150,31 +152,33 @@
     padding: 10px;
     /* 텍스트와 말풍선 경계 사이의 여유 공간 추가 */
 }
+
 .botMessage:after {
-	content: '';
-	position: absolute;
-	left: 8px;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 15px solid transparent;
-	border-right-color: var(--color-chatbot);
-	border-left: 0;
-	margin-top: -10px;
-	margin-left: -13px;
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: var(--color-chatbot);
+    border-left: 0;
+    margin-top: -10px;
+    margin-left: -13px;
 }
+
 .botMessage:after {
-	content: '';
-	position: absolute;
-	left: 8px;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 15px solid transparent;
-	border-right-color: var(--color-chatbot);
-	border-left: 0;
-	margin-top: -10px;
-	margin-left: -13px;
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: var(--color-chatbot);
+    border-left: 0;
+    margin-top: -10px;
+    margin-left: -13px;
 }
 
 .chatform {
@@ -222,12 +226,19 @@
     margin-right: 10px;
 }
 
+.img {
+    width: 450px;
+    height: 450px;
+}
+
 /* 화면의 너비가 768px 미만일 때 */
 @media (max-width: 768px) {
     .button {
         width: 40px;
         height: 40px;
     }
+
+
 }
 
 /* 화면의 너비가 600px 미만일 때 */
@@ -235,6 +246,11 @@
     .button {
         width: 35px;
         height: 35px;
+    }
+
+    .img {
+        width: 350px;
+        height: 350px;
     }
 }
 
