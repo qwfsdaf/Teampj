@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - caps
+      - master
 
 jobs:
   build:
@@ -25,6 +25,7 @@ jobs:
         run: yarn build
         env:
           REACT_APP_OPENAI_API_KEY: ${{ secrets.REACT_APP_OPENAI_API_KEY }}
+          REACT_APP_CHAT_API_KEY: ${{ secrets.REACT_APP_CHAT_API_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

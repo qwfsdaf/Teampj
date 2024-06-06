@@ -81,6 +81,7 @@
 .messagebox {
     margin: 5px 0;
     /* 메시지 간 간격을 조정 */
+    z-index: -1;
 }
 
 .userMessage,
