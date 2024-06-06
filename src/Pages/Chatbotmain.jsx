@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import img from "./icon 1 .png"
 
 export default function Chat() {
+    console.log(process.env.REACT_APP_CHAT_API_KEY)
     const [chatHistory, setChatHistory] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const endOfMessagesRef = useRef(null); // 스크롤할 위치를 참조하기 위한 ref 생성
