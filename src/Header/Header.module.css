@@ -21,6 +21,11 @@
     color: var(--color-accent);
 }
 
+.img {
+    width: 50px;
+    height: 25px;
+}
+
 .logo {
     outline: none;
     background: inherit;

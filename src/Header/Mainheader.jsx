@@ -1,14 +1,13 @@
 import React from 'react'
 import styles from './Mainheader.module.css'
 import Mainheaderbutton from '../components/Mainheaderbutton'
+import img from './logo.png'
 
 function Mainheader() {
     return (
         <div className={styles.container}>
             <div className={styles.homeheader}>
-                <Mainheaderbutton
-                    title='Logo'
-                    url='/' />
+                <img className={styles.img} src={img} alt='logo' />
             </div>
             <div className={styles.subheader}>
                 <Mainheaderbutton
