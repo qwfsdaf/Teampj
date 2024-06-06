@@ -1,0 +1,34 @@
+[
+    {
+        "q": { "image_url": "./symbols/careicon1.png", "type": 2 },
+        "a": "물 온도를 95도로 설정하고 세탁하세요."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon2.png", "type": 2 },
+        "a": "물 온도를 40도로 설정하고 세탁하세요."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon3.png", "type": 2 },
+        "a": "물 온도를 약 40도로 설정하고 세탁하세요."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon4.png", "type": 2 },
+        "a": "물 온도를 약 30도로 설정하고 중성 세제를 사용해 세탁하세요."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon5.png", "type": 2 },
+        "a": "물 온도를 약 30도로 설정하고 중성 세제를 사용해 세탁하세요.\n손세탁이 가능합니다."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon6.png", "type": 2 },
+        "a": "물세탁이 불가능합니다."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon7.png", "type": 2 },
+        "a": "염소계 표백제로 표백이 가능합니다."
+    },
+    {
+        "q": { "image_url": "./symbols/careicon8.png", "type": 2 },
+        "a": "염소계 표백제로 표백이 불가능합니다."
+    }
+]
