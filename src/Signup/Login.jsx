@@ -28,9 +28,15 @@ function Signup() {
         // 폼 데이터 처리 로직
     };
 
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(prevState => !prevState);
+    };
+
     return (
         <>
-            <Header />
+            <Header title="Community" isSidebarOpen={isSidebarOpen} onSidebarToggle={toggleSidebar} />
             <form onSubmit={handleSubmit} className={styles.container}>
                 <div className={styles.id}>
                     <div className={styles.line}>

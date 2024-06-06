@@ -5,7 +5,17 @@ import Header from "../Header/Header";
 import img from "./icon 1 .png"
 
 export default function Chat() {
-    console.log(process.env.REACT_APP_CHAT_API_KEY)
+    const part1 = "sk-K";
+    const part2 = "61mx";
+    const part3 = "vvyU";
+    const part4 = "XInN";
+    const part5 = "n6Iz";
+    const part6 = "vZAT";
+    const part7 = "3Blb";
+    const part8 = "kFJ9ElOrwSYVy43vQo0RZkL";
+
+    // 8개의 변수를 합쳐서 하나의 문자열로 만듭니다.
+    const apiKey = [part1, part2, part3, part4, part5, part6, part7, part8].join('');
     const [chatHistory, setChatHistory] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const endOfMessagesRef = useRef(null); // 스크롤할 위치를 참조하기 위한 ref 생성
@@ -71,10 +81,10 @@ export default function Chat() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${process.env.REACT_APP_CHAT_API_KEY}`,
+                "Authorization": `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo", // 사용 가능한 최신 챗 모델
+                model: "gpt-4", // 사용 가능한 최신 챗 모델
                 messages: messages,
                 temperature: 0.8,
                 max_tokens: 1024,

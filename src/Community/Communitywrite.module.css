@@ -19,6 +19,7 @@
     background-color: var(--color-white);
     border-radius: 15px;
     position: relative;
+    max-width: 900px;
     padding: 2.5% 0;
     z-index: -1;
     /* 폼 요소의 z-index 값을 낮게 설정 */
@@ -31,6 +32,7 @@
     align-items: center;
     width: 90%;
     height: 60%;
+    max-width: 900px;
     border: 1px solid var(--color-accent);
     overflow-y: auto;
     background-color: var(--color-white);
@@ -43,6 +45,7 @@
 .button {
     width: 90%;
     height: 8%;
+    max-width: 900px;
     color: var(--color-white);
     background-color: var(--color-accent);
     border-radius: 10px;
@@ -78,6 +81,7 @@
     border: none;
     border-bottom: 1px solid var(--color-line);
     outline: none;
+    margin-top: 20px;
 }
 
 .previewImage {

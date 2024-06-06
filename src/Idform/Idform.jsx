@@ -25,10 +25,16 @@ function Idform() {
         e.preventDefault();
         // 폼 데이터 처리 로직
     };
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(prevState => !prevState);
+    };
     return (
         <>
             <form onSubmit={handleSubmit} className={styles.container}>
-                <Header />
+                <Header title="Community" isSidebarOpen={isSidebarOpen} onSidebarToggle={toggleSidebar} />
                 <div className={styles.id}>
                     <div className={styles.line}>
                         <Logininput

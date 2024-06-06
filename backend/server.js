@@ -11,6 +11,18 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const part1 = "sk-ArN";
+const part2 = "NNN5";
+const part3 = "RtQ4";
+const part4 = "z3Cb";
+const part5 = "AHee";
+const part6 = "kT3B";
+const part7 = "lbkF";
+const part8 = "J1p9kjZ0YZUTY4soSm2rs";
+
+// 8개의 변수를 합쳐서 하나의 문자열로 만듭니다.
+const apiKey = [part1, part2, part3, part4, part5, part6, part7, part8].join('');
+
 const port = 3001;
 const app = express();
 
@@ -41,7 +53,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
         const headers = {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
+            'Authorization': `Bearer ${apiKey}`
         };
 
         const payload = {

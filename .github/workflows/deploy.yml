@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> .env
+          echo "REACT_APP_CHAT_API_KEY=${{ secrets.REACT_APP_CHAT_API_KEY }}" >> .env
+
       - name: Build the project
         run: yarn build
         env:
@@ -32,3 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          publish_branch: gh-pages
