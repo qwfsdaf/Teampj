@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll {
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    height: 100%;
+}
+
+.userinpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 27%;
+    max-width: 700px;
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.title {
+    width: 100%;
+    padding: 1% 2.5%;
+    box-sizing: border-box;
+    margin-left: 7px;
+}
+
+.bordertitle {
+    width: 95%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-line);
+    padding: 2.5% 0;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 60%;
+    max-width: 700px;
+    text-align: left;
+    align-items: center;
+    grid-template-rows: auto auto auto auto;
+    /* 4행을 정의합니다. 'auto'는 내용에 따라 행의 높이를 조정합니다. */
+    /* 2열을 정의합니다. 각 열은 사용 가능한 공간의 동일한 비율을 차지합니다. */
+    padding: 0 5%;
+    font-size: 0.8rem;
+}
+
+.userinpo,
+.grid {
+    box-sizing: border-box;
+}
+
+.gridlayers {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 30%;
+    height: 60%;
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border-radius: 5px;
+}
+
+.modifypw {
+    width: 20%;
+    height: 60%;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.mycloset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35%;
+    max-width: 700px;
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    align-content: center;
+    background-color: var(--color-white);
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.slidercontainer {
+    width: 80%;
+    height: 200px;
+}
+
+.appinpocontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 30%;
+    max-width: 700px;
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+
+.appinpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2.5%;
+    width: 100%;
+    height: 200px;
+}
+
+.appinpolist {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    justify-content: space-between;
+    align-content: center;
+    margin-left: 10px;
+}
+
+.appinpolistversion {
+    color: #949494;
+    margin-right: 20px;
+}
+
+.lastcomponent {
+    height: 20px;
+}
