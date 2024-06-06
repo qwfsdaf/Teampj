@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Teampj/static/css/main.f5f8ded8.css",
+    "main.css": "/Teampj/static/css/main.f5c5fa46.css",
     "main.js": "/Teampj/static/js/main.9abf3c59.js",
     "static/js/453.e09c022b.chunk.js": "/Teampj/static/js/453.e09c022b.chunk.js",
     "static/media/icon 1 .png": "/Teampj/static/media/icon 1 .5d1486a2837aec3981e3.png",
@@ -14,12 +14,12 @@
     "static/media/slick.ttf": "/Teampj/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Teampj/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Teampj/index.html",
-    "main.f5f8ded8.css.map": "/Teampj/static/css/main.f5f8ded8.css.map",
+    "main.f5c5fa46.css.map": "/Teampj/static/css/main.f5c5fa46.css.map",
     "main.9abf3c59.js.map": "/Teampj/static/js/main.9abf3c59.js.map",
     "453.e09c022b.chunk.js.map": "/Teampj/static/js/453.e09c022b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5f8ded8.css",
+    "static/css/main.f5c5fa46.css",
     "static/js/main.9abf3c59.js"
   ]
 }
