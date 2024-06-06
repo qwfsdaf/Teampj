@@ -107,3 +107,19 @@ ul li{
     color: #fff;
     font-size: 6.2rem;
 }
+
+.container .answer_btn{
+    margin-top: 3%;
+    background-color: #4F9FD8;
+    border-radius: 26px;
+    padding: 3% 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.container .answer_btn:hover{
+    background-color: #2e85c4;
+    transition: 0.3s;
+}

@@ -1,0 +1,160 @@
+[
+    {
+        "q": "옷의 세탁 라벨에 표시된 세탁 기호는 옷을 올바르게 세탁하기 위한 정보를 제공한다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "물과 전기를 절약하기 위해 세탁기를 가득 채워서 세탁해야 한다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "색이 다른 옷들을 함께 세탁해도 괜찮다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "세탁 전에 옷에 묻은 큰 얼룩을 미리 제거하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "세탁 시에 모든 의류를 뜨거운 물에 세탁하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "'드라이 클리닝 전용'으로 표시된 의류는 절대 물세탁을 하면 안 된다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "'모든 세탁물은 건조기에 넣어도 괜찮다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "울 의류는 세탁기에서 세탁하면 안 된다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },    {
+        "q": "바디워시와 같은 세제를 사용해 의류를 세탁할 수 있다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "모든 의류를 드라이 클리닝을 이용해 세탁해도 괜찮다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "두툼한 재질의 의류는 저온으로 세탁해야 한다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "두꺼운 담요는 세탁기에서 세탁해도 된다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },    {
+        "q": "흰색 의류는 뜨거운 물로 세탁하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },    {
+        "q": "세탁기에 세탁물을 넣을 때 의류의 무게를 고려해야 한다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "극세사 소재의 의류는 건조기에서 세탁할 수 없다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "세탁 시에는 항상 물에 세제를 먼저 풀어야 한다. ",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "의류에 직접 향수를 뿌려도 괜찮다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "비옷을 세탁기에 넣어 세탁해도 괜찮다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "세탁기에 사용되는 물의 양은 의류의 양과 관계없이 일정하다.",
+        "a": [
+            { "O_url": "./ox_answer_X.html", "type": 1 },
+            { "X_url": "./ox_answer_O.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "의류를 뒤집어서 건조하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "의류를 뒤집어서 건조하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "의류를 뒤집어서 건조하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    },
+    {
+        "q": "의류를 뒤집어서 건조하는 것이 좋다.",
+        "a": [
+            { "O_url": "./ox_answer_O.html", "type": 1 },
+            { "X_url": "./ox_answer_X.html", "type": 2 }
+        ]
+    }
+]

@@ -38,8 +38,11 @@ ul li{
     align-items: center;
 }
 
+.container .quiz_box a{
+    width: 60%;
+}
+
 .container .quiz_Q{
-    margin-top: 1%;
      font-weight: 500;
      font-size: 1.6rem;
     text-align: center;
@@ -47,20 +50,31 @@ ul li{
 }
 
 .container .quiz_A{
-    width: 300px;
-    height: 300px;
-    background-image: url(../symbols/careicon.png);
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-image: url(../symbols/careicon1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .container .answer_btn{
-    margin-top: 2%;
+    margin-top: 3%;
     background-color: #4F9FD8;
-    border-radius: 20px;
-    padding: 3%;
+    border-radius: 26px;
+    padding: 3% 0;
     text-align: center;
     color: #fff;
     font-size: 1.4rem;
     cursor: pointer;
+}
+
+.container .answer_btn:hover{
+    background-color: #2e85c4;
+    transition: 0.3s;
+}
+
+.quiz_answer{
+    
 }
